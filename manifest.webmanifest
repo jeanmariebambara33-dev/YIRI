@@ -1,0 +1,24 @@
+{
+  "name": "YIRI — location meublée au Burkina Faso",
+  "short_name": "YIRI",
+  "description": "Trouvez un logement meublé à Ouagadougou et Bobo-Dioulasso, ou publiez le vôtre.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f2e8",
+  "theme_color": "#49372f",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    { "src": "/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Trouver un logement", "url": "/#sejours" },
+    { "name": "Mes séjours", "url": "/#mes-sejours" },
+    { "name": "Publier mon logement", "url": "/#espace" }
+  ]
+}

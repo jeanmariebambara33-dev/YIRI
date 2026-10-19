@@ -1,0 +1,28 @@
+{
+  // Vérification des types de l'application. esbuild RETIRE les annotations sans les contrôler :
+  // sans cette étape, une erreur de typage part en production sans un mot.
+  //
+  // noImplicitAny est désactivé faute des vrais types React : le paramètre d'un gestionnaire
+  // d'événement n'aurait alors aucun type de contexte et chaque onChange produirait une erreur.
+  // Tout le reste de « strict » demeure : nullités, types de retour, propriétés manquantes.
+  //
+  // Les fichiers .test.ts sont exclus : ils tournent sous Node avec ses propres types, que le
+  // projet n'installe pas. Ils sont vérifiés en étant exécutés.
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": []
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/*.test.ts"]
+}
